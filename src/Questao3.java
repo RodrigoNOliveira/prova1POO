@@ -7,9 +7,9 @@ public class Questao3 {
         Locale.setDefault(Locale.US);
 
         Scanner scanner = new Scanner(System.in);
-        int opcao, valor1, valor2, result = 0;
-        double resultDiv = 0;
-        String escolha = "";
+        int opcao, valor1 = 0, valor2 = 0;
+        double result = 0;
+ 
 
         System.out.println();
         System.out.println(" ---------- MENU ---------- ");
@@ -22,32 +22,52 @@ public class Questao3 {
         System.out.print("INSIRA A OPÇÃO DESEJADA: ");
         opcao = scanner.nextInt();
         System.out.println();
-        System.out.print("INSIRA O PRIMEIRO VALOR: ");
-        valor1 = scanner.nextInt();
-        System.out.println();
-        System.out.print("INSIRA O SEGUNDO VALOR: ");
-        valor2 = scanner.nextInt();
-        System.out.println();
+        
         switch (opcao) {
 
             case 1:
+                System.out.print("INSIRA O PRIMEIRO VALOR: ");
+                valor1 = scanner.nextInt();
+                System.out.println();
+                System.out.print("INSIRA O SEGUNDO VALOR: ");
+                valor2 = scanner.nextInt();
+                System.out.println();
                 result = valor1 + valor2;
-                escolha = "SOMA";
+                System.out.printf("OPÇÃO ESCOLHIDA : SOMA %n%nRESULTADO = %.0f", result);
+
                 break;
 
             case 2:
+                System.out.print("INSIRA O PRIMEIRO VALOR: ");
+                valor1 = scanner.nextInt();
+                System.out.println();
+                System.out.print("INSIRA O SEGUNDO VALOR: ");
+                valor2 = scanner.nextInt();
+                System.out.println();
                 result = valor1 - valor2;
-                escolha = "SUBTRAÇÃO";
+                System.out.printf("OPÇÃO ESCOLHIDA : SUBTRAÇÃO %n%nRESULTADO = %.0f", result);
                 break;
 
             case 3:
+                System.out.print("INSIRA O PRIMEIRO VALOR: ");
+                valor1 = scanner.nextInt();
+                System.out.println();
+                System.out.print("INSIRA O SEGUNDO VALOR: ");
+                valor2 = scanner.nextInt();
+                System.out.println();
                 result = valor1 * valor2;
-                escolha = "MULTIPLICAÇÃO";
+                System.out.printf("OPÇÃO ESCOLHIDA : MULTIPLICAÇÃO %n%nRESULTADO = %.0f", result);
                 break;
 
             case 4:
-                resultDiv = (double)valor1 / valor2;
-                escolha = "DIVISÃO";
+                System.out.print("INSIRA O PRIMEIRO VALOR: ");
+                valor1 = scanner.nextInt();
+                System.out.println();
+                System.out.print("INSIRA O SEGUNDO VALOR: ");
+                valor2 = scanner.nextInt();
+                System.out.println();
+                result= (double) valor1 / valor2;
+                System.out.printf("OPÇÃO ESCOLHIDA : DIVISÃO %n%nRESULTADO = %.2f", result);
                 break;
 
             default:
@@ -56,16 +76,7 @@ public class Questao3 {
 
         }
 
-        System.out.println("OPÇÃO ESCOLHIDA: " + escolha);
-        System.out.println();
-
         
-        if (escolha == "DIVISÃO") {
-            System.out.println("O RESULTADO É DE: " + resultDiv);
-        } else {
-            System.out.println("O RESULTADO É DE: " + result);
-        }
-
         scanner.close();
 
     }
